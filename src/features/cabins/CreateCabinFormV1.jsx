@@ -11,9 +11,7 @@ import FormRow from "../../ui/FormRow";
 import { useForm } from "react-hook-form";
 import { createCabin } from "../../services/apiCabin";
 
-function CreateCabinForm({ cabinToEdit = {} }) {
-  const { id: editId, ...editValues } = cabinToEdit;
-
+function CreateCabinForm() {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
   const { errors } = formState;
 
@@ -30,7 +28,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
   });
 
   function onSubmit(data) {
-    console.log(data);
+    console.log(data)
     mutate({ ...data, image: data.image[0] });
   }
 
