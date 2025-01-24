@@ -1,12 +1,20 @@
 import { getToday } from "../utils/helpers";
 import supabase from "./supabase";
 
-export async function apiBookings() {
-  const { data, error } = await supabase.from("booking").select("*");
+export async function getBookings({ filter, sortBy }) {
+  let qurey = supabase
+    .from("bookings")
+    .select(
+      "id, created_at, startDate, endDate, numNights, numGuests, status, totalPrice, cabins(name), guests(fullName, email)"
+    );
+
+  if (filter !== null) qurey = qurey.eq(filter.field, filter.value);
+
+  const { data, error } = await qurey;
 
   if (error) {
     console.error(error);
-    throw new Error("Booking copuld not be loaded");
+    throw new Error("Booking could not be loaded");
   }
 
   return data;
