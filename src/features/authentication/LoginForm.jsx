@@ -5,10 +5,14 @@ import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("blessing@example.com");
+  const [password, setPassword] = useState("bless980");
 
-  function handleSubmit() {}
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!email || !password) return;
+
+  }
 
   return (
     <Form onSubmit={handleSubmit}>
