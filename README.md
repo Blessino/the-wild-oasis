@@ -55,5 +55,5 @@ This project helped me strengthen my skills in **React**, **React Router**, **st
 
 **Ashish Chaudhary**  
 📧 grunch.me1@gmail.com  
-🔗 [LinkedIn – Ashish Chaudhary](https://www.linkedin.com/in/ashish-chaudhary)  
+🔗 [LinkedIn – Ashish Chaudhary](https://www.linkedin.com/in/ashish-chaudhary1996)  
 💻 [GitHub – Blessino](https://github.com/Blessino)
